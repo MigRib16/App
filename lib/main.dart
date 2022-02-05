@@ -6,6 +6,7 @@ void main() {
     home : Scaffold(
       appBar: AppBar(
         title: Text('Deticare App'),
+        centerTitle: true, 
         backgroundColor: Colors.blue,
       ),
     ),
