@@ -5,7 +5,7 @@ void main() {
     MaterialApp(
     home : Scaffold(
       appBar: AppBar(
-        title: Text('Hello World'),
+        title: Text('Deticare'),
         backgroundColor: Colors.blue,
       ),
     ),
