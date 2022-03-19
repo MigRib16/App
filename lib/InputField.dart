@@ -27,10 +27,12 @@ class InputField extends StatelessWidget {
             )
           ),
           child: TextField(
-            decoration: InputDecoration(
+             obscureText: true,                  //Meter '****'
+             decoration: InputDecoration(
               hintText: "Enter your password",
               hintStyle: TextStyle( color: Colors.grey),
               border: InputBorder.none
+              
             ),
           ),
         ),
