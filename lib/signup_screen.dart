@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'MenuScreen.dart';
 class SignUpScreen extends StatefulWidget {
 
@@ -20,7 +21,7 @@ class InitState extends State<SignUpScreen> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(90)),
                 gradient: LinearGradient(
-                  colors: [(new Color(0xffF5591F)), (new Color(0xffF2861E))],
+                  colors: [(new Color.fromARGB(255, 31, 142, 245)), (new Color.fromARGB(255, 31, 142, 245))],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 )
@@ -39,7 +40,7 @@ class InitState extends State<SignUpScreen> {
               ),
               Container(
                 margin: EdgeInsets.only(right:20, top:20),
-                alignment: Alignment.bottomRight,
+                alignment: Alignment.center,
                 child: Text(
                   "Register",
                   style: TextStyle(
@@ -67,11 +68,11 @@ class InitState extends State<SignUpScreen> {
     ),
     alignment: Alignment.center,
     child:  TextField(
-    cursorColor: Color(0xffF5591F),
+    cursorColor: Color.fromARGB(255, 31, 142, 245),
     decoration: InputDecoration(
     icon: Icon(
     Icons.person,
-    color: Color(0xffF5591F),
+    color: Color.fromARGB(255, 31, 142, 245),
     ),
     hintText: "Full Name",
     enabledBorder: InputBorder.none,
@@ -94,11 +95,15 @@ class InitState extends State<SignUpScreen> {
     ),
     alignment: Alignment.center,
     child:  TextField(
-    cursorColor: Color(0xffF5591F),
+    keyboardType: TextInputType.number,
+    inputFormatters: [
+                  FilteringTextInputFormatter.digitsOnly,
+                ],  
+    cursorColor: Color.fromARGB(255, 31, 142, 245),
     decoration: InputDecoration(
     icon: Icon(
     Icons.phone,
-    color: Color(0xffF5591F),
+    color: Color.fromARGB(255, 31, 142, 245),
     ),
     hintText: "Phone Number",
     enabledBorder: InputBorder.none,
@@ -121,11 +126,11 @@ class InitState extends State<SignUpScreen> {
     ),
     alignment: Alignment.center,
     child:  TextField(
-    cursorColor: Color(0xffF5591F),
+    cursorColor: Color.fromARGB(255, 31, 142, 245),
     decoration: InputDecoration(
     icon: Icon(
     Icons.email,
-    color: Color(0xffF5591F),
+    color: Color.fromARGB(255, 31, 142, 245),
     ),
     hintText: "Enter Email",
     enabledBorder: InputBorder.none,
@@ -149,11 +154,11 @@ class InitState extends State<SignUpScreen> {
     alignment: Alignment.center,
     child:  TextField(
       obscureText: true,
-    cursorColor: Color(0xffF5591F),
+    cursorColor: Color.fromARGB(255, 31, 142, 245),
     decoration: InputDecoration(
     icon: Icon(
     Icons.vpn_key,
-    color: Color(0xffF5591F),
+    color: Color.fromARGB(255, 31, 142, 245),
     ),
     hintText: "Enter Password",
     enabledBorder: InputBorder.none,
@@ -174,7 +179,7 @@ class InitState extends State<SignUpScreen> {
                 height: 54,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [(new Color(0xffF5591F)), (new Color(0xffF2861E))],
+                    colors: [(new Color.fromARGB(255, 31, 142, 245)), (new Color.fromARGB(255, 31, 142, 245))],
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
 
@@ -207,9 +212,9 @@ class InitState extends State<SignUpScreen> {
     Navigator.pop(context)
     },
     child: Text(
-    "Login Now",
+    " Login Now",
     style: TextStyle(
-    color: Color(0xffF5591F)
+    color: Color.fromARGB(255, 31, 142, 245)
     ),
     ),
     ),

@@ -34,9 +34,9 @@ Widget  initWidget() {
           children: [
             Container(
               decoration: BoxDecoration(
-                  color: new Color(0xffF5591F),
+                  color: Color.fromARGB(255, 31, 142, 245),
                   gradient: LinearGradient(
-                    colors: [(new Color(0xffF5591F)), (new Color(0xffF2861E))],
+                    colors: [(new Color.fromARGB(255, 31, 142, 245)), (new Color.fromARGB(255, 31, 142, 245))],
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
 

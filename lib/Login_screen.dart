@@ -21,9 +21,9 @@ class InitState extends State<LoginScreen> {
               height: 300,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(90)),
-                color: Color(0xffF5591F),
+                color: Color.fromARGB(255, 31, 142, 245),
                 gradient: LinearGradient(
-                  colors: [(new Color(0xffF5591F)), (new Color(0xffF2861E))],
+                  colors: [(new Color.fromARGB(255, 31, 142, 245)), (new Color.fromARGB(255, 31, 142, 245))],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                 )
@@ -41,7 +41,7 @@ class InitState extends State<LoginScreen> {
                     ),
                     Container(
                       margin: EdgeInsets.only(top: 50),
-                        alignment: Alignment.bottomRight,
+                        alignment: Alignment.center,
                       child: Text(
                         "Login",
                         style: TextStyle(
@@ -69,11 +69,11 @@ class InitState extends State<LoginScreen> {
               ),
               alignment: Alignment.center,
                 child:  TextField(
-                  cursorColor: Color(0xffF5591F),
+                  cursorColor: Color.fromARGB(255, 31, 142, 245),
                   decoration: InputDecoration(
                     icon: Icon(
                       Icons.email,
-                      color: Color(0xffF5591F),
+                      color: Color.fromARGB(255, 31, 142, 245),
                     ),
                     hintText: "Enter Email",
                     enabledBorder: InputBorder.none,
@@ -97,11 +97,11 @@ class InitState extends State<LoginScreen> {
               alignment: Alignment.center,
               child:  TextField(
                 obscureText: true,
-                cursorColor: Color(0xffF5591F),
+                cursorColor: Color.fromARGB(255, 31, 142, 245),
                 decoration: InputDecoration(
                   icon: Icon(
                     Icons.vpn_key,
-                    color: Color(0xffF5591F),
+                    color: Color.fromARGB(255, 31, 142, 245),
                   ),
                   hintText: "Enter Password",
                   enabledBorder: InputBorder.none,
@@ -111,9 +111,9 @@ class InitState extends State<LoginScreen> {
             ),
             Container(
               margin: EdgeInsets.only(top: 20, right: 20),
-              alignment: Alignment.centerRight,
+              alignment: Alignment.center,
               child: GestureDetector(
-                child: Text("Forget Password?"),
+                child: Text("Forgot Password?"),
                 onTap: () => {
 
                 },
@@ -133,7 +133,7 @@ class InitState extends State<LoginScreen> {
                 height: 54,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [(new Color(0xffF5591F)), (new Color(0xffF2861E))],
+                    colors: [(new Color.fromARGB(255, 31, 142, 245)), (new Color.fromARGB(255, 31, 142, 245))],
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
 
@@ -160,7 +160,7 @@ class InitState extends State<LoginScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("don't Have an Account?"),
+                  Text("Don't have an account?"),
                    GestureDetector(
                     onTap:() => {
                       Navigator.push(context, MaterialPageRoute(
@@ -168,9 +168,9 @@ class InitState extends State<LoginScreen> {
                       ))
                      },
                     child: Text(
-                    "Register Now",
+                    " Register now",
                     style: TextStyle(
-                    color: Color(0xffF5591F)
+                    color: Color.fromARGB(255, 31, 142, 245)
     ),
     ),
     )

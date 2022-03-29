@@ -11,7 +11,7 @@ class MenuScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text('MENU'),
           centerTitle: true,
-          backgroundColor: Colors.lightBlue,
+          backgroundColor: Color.fromARGB(255, 31, 142, 245),
         ),
         body: Center(
           child: Column(
@@ -25,8 +25,8 @@ class MenuScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15)
                   ),
 
-                  color: Colors.red,
-                  textColor: Colors.red,
+                  color: Color.fromARGB(255, 31, 142, 245),
+                  textColor: Color.fromARGB(255, 31, 142, 245),
                   onPressed: () {},
                 ),
               ),
@@ -38,8 +38,8 @@ class MenuScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15)
                   ),
 
-                  color: Colors.red,
-                  textColor: Colors.red,
+                  color: Color.fromARGB(255, 31, 142, 245),
+                  textColor: Color.fromARGB(255, 31, 142, 245),
                   onPressed: () {},
                 ),
               ),
@@ -51,8 +51,8 @@ class MenuScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15)
                   ),
 
-                  color: Colors.red,
-                  textColor: Colors.red,
+                  color: Color.fromARGB(255, 31, 142, 245),
+                  textColor: Color.fromARGB(255, 31, 142, 245),
                   onPressed: () {},
                 ),
               ),
@@ -64,8 +64,8 @@ class MenuScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15)
                   ),
 
-                  color: Colors.red,
-                  textColor: Colors.red,
+                  color: Color.fromARGB(255, 31, 142, 245),
+                  textColor: Color.fromARGB(255, 31, 142, 245),
                   onPressed: () {},
                 ),
               ),
