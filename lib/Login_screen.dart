@@ -114,9 +114,7 @@ class InitState extends State<LoginScreen> {
               alignment: Alignment.center,
               child: GestureDetector(
                 child: Text("Forgot Password?"),
-                onTap: () => {
-
-                },
+                onTap: () => {}
               ),
             ),
             GestureDetector(
