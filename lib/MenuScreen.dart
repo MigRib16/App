@@ -1,5 +1,6 @@
 import 'package:app/Chat_Screen.dart';
 import 'package:app/Graph_screen.dart';
+import 'package:app/Profile_Screen.dart';
 import 'package:app/Upload_Screen.dart';
 import'package:flutter/material.dart';
 
@@ -27,7 +28,8 @@ class MenuScreen extends StatelessWidget {
                 child: OutlineButton(
                   child: Text("Upload"),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)
+                  borderRadius: BorderRadius.circular(15)
+                  
                   ),
 
                   color: Color.fromARGB(255, 31, 142, 245),
@@ -99,7 +101,7 @@ class MenuScreen extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(top: 4),
                 child: OutlineButton(
-                  child: Text("Perfil"),
+                  child: Text("Profile"),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)
                   ),
@@ -108,7 +110,7 @@ class MenuScreen extends StatelessWidget {
                   textColor: Color.fromARGB(255, 31, 142, 245),
                   onPressed: () {
                      Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => ChatScreen()
+                    builder: (context) => ProfileScreen(),
                     )
                     );
                   },
