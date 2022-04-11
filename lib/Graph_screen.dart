@@ -5,11 +5,11 @@ import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 class GraphScreen extends StatelessWidget {
  GraphScreen({Key? key}) : super(key: key);
 List<_SalesData> data = [
-    _SalesData('01 Janeiro', 35),
-    _SalesData('05 Janeiro', 28),
-    _SalesData('10 Janeiro', 34),
-    _SalesData('15 Janeiro', 32),
-    _SalesData('20 Janeiro', 40)
+    _SalesData('01 Jan', 35),
+    _SalesData('05 Jan', 28),
+    _SalesData('10 Jan', 34),
+    _SalesData('15 Jan', 32),
+    _SalesData('20 Jan', 40)
   ];
 @override
 
