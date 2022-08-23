@@ -2,6 +2,7 @@ import 'package:app/Chat_Screen.dart';
 import 'package:app/Graph_screen.dart';
 import 'package:app/Profile_Screen.dart';
 import 'package:app/Upload_Screen.dart';
+import 'package:app/Exercises_Screen.dart';
 import'package:flutter/material.dart';
 
 class MenuScreen extends StatelessWidget {
@@ -22,100 +23,135 @@ class MenuScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
 
-              
+
               Container(
                 margin: EdgeInsets.only(top: 8),
-                child: OutlineButton(
-                  child: Text("Upload"),
-                  shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15)
-                  
-                  ),
-
-                  color: Color.fromARGB(255, 31, 142, 245),
-                  textColor: Color.fromARGB(255, 31, 142, 245),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
+                child: ButtonTheme(
+                  minWidth: 150.0,
+                  height: 70.0,
+               child: OutlineButton(
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(
                     builder: (context) => UploadScreen()
-                    )
-                    );
+                       )
+                      );
                     },
-                ),
+            child: Text("Upload"),
+            textColor: Color.fromARGB(255, 31, 142, 245),
+            shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+            borderSide: BorderSide(
+              color: Color.fromARGB(255, 31, 142, 245),
+              style: BorderStyle.solid,
+              width: 1,
+            ),
+          ),
+        )
               ),
 
+
+            Container(
+                margin: EdgeInsets.only(top: 16),
+                child: ButtonTheme(
+                  minWidth: 150.0,
+                  height: 70.0,
+               child: OutlineButton(
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => GraphScreen()
+                       )
+                      );
+                    },
+                child: Text("Graph"),
+                textColor: Color.fromARGB(255, 31, 142, 245),
+                shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                borderSide: BorderSide(
+                  color: Color.fromARGB(255, 31, 142, 245),
+                  style: BorderStyle.solid,
+                  width: 1,
+                           ),
+                        ),
+                     )
+                  ),
+              
+
+
+               Container(
+                margin: EdgeInsets.only(top: 16),
+                child: ButtonTheme(
+                  minWidth: 150.0,
+                  height: 70.0,
+               child: OutlineButton(
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => ChatScreen()
+                       )
+                      );
+                    },
+                child: Text("Chat"),
+                textColor: Color.fromARGB(255, 31, 142, 245),
+                shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                borderSide: BorderSide(
+                  color: Color.fromARGB(255, 31, 142, 245),
+                  style: BorderStyle.solid,
+                  width: 1,
+                           ),
+                        ),
+                     )
+                  ),
+
+
+               Container(
+                margin: EdgeInsets.only(top: 16),
+                child: ButtonTheme(
+                  minWidth: 150.0,
+                  height: 70.0,
+               child: OutlineButton(
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => ExercisesScreen()
+                       )
+                      );
+                    },
+                child: Text("Exercises"),
+                textColor: Color.fromARGB(255, 31, 142, 245),
+                shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                borderSide: BorderSide(
+                  color: Color.fromARGB(255, 31, 142, 245),
+                  style: BorderStyle.solid,
+                  width: 1,
+                           ),
+                        ),
+                     )
+                  ),
 
               Container(
                 margin: EdgeInsets.only(top: 16),
-                child: OutlineButton(
-                  child: Text("Graph"),
-                  shape: RoundedRectangleBorder(
+                child: ButtonTheme(
+                  minWidth: 150.0,
+                  height: 70.0,
+               child: OutlineButton(
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => ProfileScreen()
+                       )
+                      );
+                    },
+                child: Text("Profile"),
+                textColor: Color.fromARGB(255, 31, 142, 245),
+                shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)
                   ),
-
+                borderSide: BorderSide(
                   color: Color.fromARGB(255, 31, 142, 245),
-                  textColor: Color.fromARGB(255, 31, 142, 245),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => GraphScreen()
-                )
-                );
-                },
-                ),
-              ),
-
-
-              Container(
-                margin: EdgeInsets.only(top: 50),
-                child: OutlineButton(
-                  child: Text("Chat"),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)
+                  style: BorderStyle.solid,
+                  width: 1,
+                           ),
+                        ),
+                     )
                   ),
-
-                  color: Color.fromARGB(255, 31, 142, 245),
-                  textColor: Color.fromARGB(255, 31, 142, 245),
-                  onPressed: () {
-                     Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => ChatScreen()
-                    )
-                    );
-                  },
-                ),
-              ),
-
-
-              Container(
-                margin: EdgeInsets.only(top: 32),
-                child: OutlineButton(
-                  child: Text("Exercises"),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)
-                  ),
-
-                  color: Color.fromARGB(255, 31, 142, 245),
-                  textColor: Color.fromARGB(255, 31, 142, 245),
-                  onPressed: () {},
-                ),
-              ),
-
-              Container(
-                margin: EdgeInsets.only(top: 4),
-                child: OutlineButton(
-                  child: Text("Profile"),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)
-                  ),
-
-                  color: Color.fromARGB(255, 31, 142, 245),
-                  textColor: Color.fromARGB(255, 31, 142, 245),
-                  onPressed: () {
-                     Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => ProfileScreen(),
-                    )
-                    );
-                  },
-                ),
-              ),
 
             ],
           ),

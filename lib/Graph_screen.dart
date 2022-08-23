@@ -5,25 +5,26 @@ import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 class GraphScreen extends StatelessWidget {
  GraphScreen({Key? key}) : super(key: key);
 List<_SalesData> data = [
-    _SalesData('01 Jan', 35),
-    _SalesData('05 Jan', 28),
-    _SalesData('10 Jan', 34),
-    _SalesData('15 Jan', 32),
-    _SalesData('20 Jan', 40)
+    _SalesData('01 Jan', 94),
+    _SalesData('05 Jan', 97),
+    _SalesData('10 Jan', 95),
+    _SalesData('15 Jan', 98),
+    _SalesData('20 Jan', 94)
   ];
 @override
 
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Gráfico'),
+          title: const Text('Graph'),
+          backgroundColor: Color.fromARGB(255, 31, 142, 245),
         ),
         body: Column(children: [
           //Initialize the chart widget
           SfCartesianChart(
               primaryXAxis: CategoryAxis(),
               // Chart title
-              title: ChartTitle(text: 'Half yearly sales analysis'),
+              title: ChartTitle(text: 'Blood Pressure Graph'),
               // Enable legend
               legend: Legend(isVisible: true),
               // Enable tooltip
@@ -33,7 +34,7 @@ List<_SalesData> data = [
                     dataSource: data,
                     xValueMapper: (_SalesData sales, _) => sales.year,
                     yValueMapper: (_SalesData sales, _) => sales.sales,
-                    name: 'Sales',
+                    name: 'SpO2',
                     // Enable data label
                     dataLabelSettings: DataLabelSettings(isVisible: true))
               ]),

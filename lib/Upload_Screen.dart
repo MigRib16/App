@@ -14,35 +14,46 @@ const UploadScreen({Key? key}) : super(key: key);
       Scaffold(
 
         appBar: AppBar(
+          
           title: Text('Upload'),
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 31, 142, 245),
         ),
-        body: Container(
-          alignment: Alignment.center,
-          constraints: BoxConstraints(maxWidth: 1000),
-          padding: EdgeInsets.all(32),
-          width: 500.0,
-          height: 200.0,
-          child: ElevatedButton(
-            child: Text('Pick file'),
-             style: ElevatedButton.styleFrom(
-              primary: Color.fromARGB(255, 31, 142, 245),
-              fixedSize: const Size(240, 80),  //Tamanho do botão
-              shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(50))),
-            onPressed: () async{
+        body: Center( 
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(top: 1),
+                child: ButtonTheme(
+                  minWidth: 150.0,
+                  height: 70.0,
+               child: OutlineButton(
+               onPressed: () async{
               final result = await FilePicker.platform.pickFiles();
               if(result==null) return;
 
               //Open single file
               final file=result.files.first;
               openFile(file);
-            },
+               },
+                    
+                child: Text("Upload"),
+                textColor: Color.fromARGB(255, 31, 142, 245),
+                shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)
+                  ),
+                borderSide: BorderSide(
+                  color: Color.fromARGB(255, 31, 142, 245),
+                  style: BorderStyle.solid,
+                  width: 1,
+                           ),
+                        ),
+                     )
+                  ),
+            ],
           ),
           ),
-
-       
       );
 void openFile(PlatformFile file){
   OpenFile.open(file.path!);
